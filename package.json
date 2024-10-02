@@ -1,0 +1,29 @@
+{
+  "name": "orm-benchmark",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:server:drizzle": "ts-node drizzle-server.ts",
+    "start:server:pg": "ts-node sql-server.ts",
+    "seed": "ts-node seed.ts",
+    "generate": "ts-node generate.ts",
+    "bench": "wrk -t12 -c400 -d30s -s ./bench/wrk_script.lua http://localhost:4000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^9.0.3",
+    "@types/pg": "^8.11.10",
+    "drizzle-orm": "^0.33.0",
+    "express": "^4.21.0",
+    "pg": "^8.13.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.7.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  }
+}
