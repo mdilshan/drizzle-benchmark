@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:server:drizzle": "ts-node drizzle-server.ts",
-    "start:server:pg": "ts-node sql-server.ts",
+    "server:drizzle": "ts-node drizzle-server.ts",
+    "server:pg": "ts-node sql-server.ts",
     "seed": "ts-node seed.ts",
     "generate": "ts-node generate.ts",
     "bench": "wrk -t12 -c400 -d30s -s ./bench/wrk_script.lua http://localhost:4000"
